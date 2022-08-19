@@ -1,0 +1,133 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.contact-form { 
+    padding-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center; 
+  
+
+    * {
+        padding: 0.7rem;
+        margin: .8rem auto;
+        display: block;
+        width: 100%; 
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    legend {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+
+        @include m.telefono {
+            font-size: 2rem;
+        }
+    }
+    
+    .contact-form-response {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        background-color: #449447;
+        font-size: 1.2rem;
+        color: #fff;
+        padding: 0.2rem;
+    }
+
+    .input, textarea {
+        font-size: 1rem;
+        font-family: sans-serif;
+        border-radius: 5px;
+        outline: none;
+        background-color: #fff;
+
+        @include m.telefono {
+            font-size: 1.5rem;
+        }
+    }
+
+
+    *::placeholder {
+        color: #000;
+        font-family: v.$main-font;
+    }
+
+    .btn-enviar {
+        background-color: v.$green;
+        outline: none;
+        border: none;
+        border-radius: .2rem;
+        font-size: 1rem;
+        font-weight: normal;
+        cursor: pointer;
+        width: 100%;
+        transition: all .3s ease;
+
+        &:hover {
+            background-color: v.$blue;
+            color: #fff;
+        }
+
+        @include m.telefono {
+            font-size: 1.5rem;
+            width: 50%;
+        }
+    }
+
+
+    .contact-form-error {
+        margin-top: -1rem;
+        font-size: 80%;
+        background-color: #d1291d;
+        color: #fff;
+        transition: all 800ms ease;
+        border-radius: 5px;
+
+    &.is-active {
+        display: block;
+        animation: show-message 1s 1 normal 0s ease-out both;
+        }
+    }
+
+      
+    .contact-form-loader {
+        text-align: center;
+
+        .loader {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    
+    }
+
+        
+    .none {
+        display: none;
+    }
+
+    @keyframes show-message {
+        0% {
+          visibility: hidden;
+          opacity: 0;
+        }
+    
+        100% {
+          visibility: visible;
+          opacity: 1;
+        }
+    }
+
+  
+}
+
+
+

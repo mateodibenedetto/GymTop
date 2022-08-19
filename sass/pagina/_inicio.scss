@@ -1,0 +1,36 @@
+@use '../base/variables' as v;
+
+
+
+.home {
+    .container-home { 
+        padding-top: 5rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 90vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .title {
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            .h2 {
+                font-size: 3.5rem;
+                color: v.$green;
+                font-family: v.$second-font;
+            }
+            .desc {
+                font-size: 1rem;
+                color: v.$green;
+                font-family: v.$second-font;
+            }
+        }
+    }
+}

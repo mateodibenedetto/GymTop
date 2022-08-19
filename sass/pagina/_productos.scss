@@ -1,0 +1,211 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.productos {
+    padding: 1rem;
+    padding-top: 10rem;
+    margin: 1rem;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(360px,1fr));
+    gap: 1rem;
+
+    .card-container {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color: v.$green;
+        margin: 0 auto; 
+
+        @include m.telefono {
+            margin: 0 50px;
+        }
+        @include m.tablet {
+            margin: 0 100px;
+        }
+        @include m.desktop {
+            margin: 0 200px;
+        }
+        @include m.xl {
+            margin: 0 400px;
+        }
+        @include m.xxl {
+            margin: 0 600px;
+        }
+
+        .btn-back-container {
+
+            .btn-back {
+                background-color:v.$main-color;
+                font-weight: bold;
+                padding: 0 2rem;
+                border-radius: .2rem;
+                font-size: 1.5rem;
+                margin: .5rem;
+                color: v.$blue;
+                transition: all .3s ease;
+
+                &:hover {
+                    background-color: v.$blue;
+                    color: #fff;
+                }
+            }
+        }
+
+        .card {
+            display: flex;
+            justify-content: center;
+            flex-flow: column wrap;
+            align-items: center;  
+            gap: 1rem;
+            padding-bottom: 2rem; 
+            
+            img {
+                max-width: 350px;
+                max-height: 350px;
+            }
+    
+            .nombre {
+                text-align: center;
+                padding: 0 3rem;
+                color: #000;
+                font-weight: 500;
+                font-size: 1.5rem;
+            }
+    
+            .precio {
+                color: #000;
+            }
+            
+            .btn {
+                text-align: center;
+                font-size: 1.2rem;
+                background-color: v.$main-color;
+                padding: .5rem 1.5rem;
+                border-radius: .2rem;
+                cursor: pointer;
+                font-weight: bold;
+                gap: .5rem;
+                transition: all .2s ease;
+    
+                &:hover {
+                    opacity: .9;
+                }
+
+                &.btn-agregado {
+                    background-color: rgb(185, 185, 185);
+                }
+            }
+
+         
+            
+            .cantidad {
+                display: flex;
+                align-items: center;
+
+                .btn {
+                    text-align: center;
+                    font-size: 1.2rem;
+                    background-color: v.$main-color;
+                    padding: .5rem 1.5rem;
+                    border-radius: .2rem;
+                    cursor: pointer;
+                    font-weight: bold;
+                    gap: .5rem;
+                    transition: all .2s ease;
+        
+                    &:hover {
+                        opacity: .9;
+                    }
+                }
+
+          
+
+                .mas, .menos {
+                    margin: 1rem;
+                    background-color: rgb(179, 179, 179);
+                    padding: 0 1rem;
+                    border-radius: .2rem;
+                    cursor: pointer;
+                    transition: all .2s ease;
+
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+                
+            }
+
+        
+    
+        }
+
+        .descripcion {
+            padding-top: 3rem;
+        }
+    }
+    
+    
+
+    .producto {
+        padding: 1rem;
+        background-color: #fff;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        gap: .8rem;
+        min-width: 322px;
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.274);
+
+        img {
+            width: auto;
+           
+            @include m.telefono {
+                max-height: 283px;
+                min-width: 283px;
+            }
+        }
+
+        .nombre {
+            text-align: center;
+            padding-top: 1rem;
+            color: #000;
+            font-weight: 500;
+            font-size: 1.5rem;
+        }
+
+        
+        .btn-agregar {
+            background-color: v.$blue;
+            padding: 0 2rem;
+            color: #fff;
+            font-size: 1.2rem;
+            border-radius: .2rem;
+            cursor: pointer;
+            
+            &:hover {
+                opacity: .8;
+            }
+        }
+
+        .precio {
+            color: #000;
+        }
+
+        .btn {
+            text-align: center;
+            font-size: 1rem;
+            background-color: v.$main-color;
+            padding: .5rem 1.5rem;
+            border-radius: .2rem;
+            cursor: pointer;
+            font-weight: normal;
+            gap: .5rem;
+
+            &:hover {
+                opacity: .9;
+            }
+        }
+    }
+}

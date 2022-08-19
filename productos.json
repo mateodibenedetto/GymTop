@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "title": "Rueda abdominal",
+        "category": "articulos",
+        "price": 120,
+        "img": "<img src='./imgs/rueda-abdominal-plastico.jpg' />",
+        "desc": "Barrras de paralelas para hacer calistenia"
+    },
+    {
+        "id": 2,
+        "title": "Mancuerna Rusa",
+        "category": "pesas",
+        "price": 80,
+        "img": "<img src='./imgs/pesa-rusa.jpg' />",
+        "desc": "Marcuerna Rusa"
+    },
+    {
+        "id": 3,
+        "title": "Barra de Dominadas",
+        "category": "maquina",
+        "price": 320,
+        "img": "<img src='./imgs/barra-dominadas.jpg' />",
+        "desc": "Barra de Dominadas"
+    },
+    {
+        "id": 4,
+        "title": "Cuerda para saltar",
+        "category": "articulos",
+        "price": 20,
+        "img": "<img src='./imgs/cuerda-saltar.jpg' />",
+        "desc": "Cuerda para saltar como rocky"
+    },
+    {
+        "id": 5,
+        "title": "Colchoneta",
+        "category": "articulos",
+        "price": 50,
+        "img": "<img src='./imgs/colchoneta.jpg' />",
+        "desc": "Colchoneta para hacer cardio"
+    },
+    {
+        "id": 6,
+        "title": "Mancuerna",
+        "category": "pesas",
+        "price": 60,
+        "img": "<img src='./imgs/mancuerna.png'/>",
+        "desc": "Mancuernas de hierro"
+    }
+
+]

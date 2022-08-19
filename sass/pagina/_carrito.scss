@@ -1,0 +1,194 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.carrito { 
+    padding-top: 10rem;
+
+    .empty {
+        margin-top: 3rem;
+        text-align: center;
+        color: v.$green;
+        font-weight: normal; 
+        font-size: 1.8rem;
+    }
+
+    .total {
+        background-color: v.$green;
+        margin: .5rem 2rem;
+        border-radius: 0.2rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .opciones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+
+        @include m.telefono {
+            flex-direction: row;
+        }
+
+        .btn-compra {
+            text-align: center;
+            background-color: v.$green;
+            padding: .5rem 2rem;
+            cursor: pointer;
+            border-radius: .2rem; 
+            margin: .5em;
+            font-size: 1rem;
+    
+            @include m.telefono {
+                font-size: 1.5rem;
+            }
+
+            &:hover {
+                opacity: .9;
+            }
+        }
+        .btn-borrar-todo {
+            text-align: center;
+            background-color: transparent;
+            border: 1px solid v.$green;
+            padding: .5rem 2rem;
+            cursor: pointer;
+            color: #fff;
+            border-radius: .2rem;
+            margin: .5rem;
+            transition: all .3s ease;
+            font-size: 1rem;
+
+            @include m.telefono {
+                font-size: 1.5rem;
+            }
+    
+            &:hover {
+                background-color: v.$green;
+                color: #000;
+            }
+        }
+    }
+ 
+
+    .h2 {
+        text-align: center;
+        padding-bottom: 2rem;
+        font-family: v.$second-font;
+        color: #ffff;
+    }
+
+    .checkout-container { 
+        display: flex;
+        flex-flow: column wrap; 
+
+        .producto {
+            padding: 1rem;
+            background-color: v.$green;
+            border-radius: .4rem;
+            display: flex;
+            justify-content: space-around;
+            margin: .5rem;
+
+            @include m.telefono {
+                padding: 2rem;
+                margin: .5rem 2rem;
+            }
+
+
+            .btn-container-borrar {
+                display: flex;
+                align-items: center;
+                .btn-borrar { 
+                    font-size: 1rem;
+                    background-color:rgb(208, 75, 75);
+                    padding: .2rem .5rem;
+                    font-size: .7rem;
+                    font-weight: bold;
+                    color: #fff;
+                    border-radius: .4rem;
+                    cursor: pointer; 
+                    transition: all .1s ease;
+        
+                    &:hover {
+                        background-color: darken(rgb(208, 75, 75), 10);
+                    }
+
+                    @include m.telefono {
+                        font-size: 1rem;
+                        padding: .2rem 1.5rem;
+                    }
+                }
+            }
+
+            .cantidad {
+                display: flex;
+                align-items: center;
+               
+                .p {
+                    font-size: 1rem;
+                }
+
+                .mas, .menos {
+                    margin: .3rem;
+                    background-color: rgb(179, 179, 179);
+                    padding: 0 .5rem;
+                    border-radius: .2rem;
+                    cursor: pointer;
+                    font-size: 1rem;
+                }
+
+                @include m.telefono { 
+                    .p {
+                        font-size: 1.5rem;
+                    }
+
+                    .mas, .menos {
+                        font-size: 1.5rem;
+                        margin: 1rem;
+                        padding: 0 1rem;
+                    }
+
+                }
+                
+            }
+            
+            .listaProducto {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: .5rem;
+
+                .precio {
+                    font-size: 1rem;
+                }
+             
+                h4 {
+                    font-size: 1rem;
+                }
+                .img {
+                    max-width: 100px;
+                    max-height: 100px;
+                }
+
+                @include m.telefono {
+                    flex-direction: row;
+                    gap: 5rem;
+
+                    .precio { 
+                        font-size: 1.5rem;
+                    }
+
+                    h4 {
+                        font-size: 1.5rem;
+                    }
+                }
+               
+        
+            }
+    
+        
+        }
+    }
+}

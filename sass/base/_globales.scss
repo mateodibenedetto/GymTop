@@ -1,0 +1,69 @@
+@use 'variables' as v;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: v.$main-font;
+    font-size: 1.6rem;
+    min-height: 100vh;
+    background-color: v.$second-color;
+    overflow-x: hidden;
+}
+
+img,
+video,
+figure {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    object-position: center center;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+p a {
+    display: inline;
+}
+
+li {
+    list-style-type: none;
+}
+
+form,
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    background-color: transparent;
+    display: flex;
+    color: inherit;
+}
+
+.none {
+    display: none;
+}
